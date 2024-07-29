@@ -1,0 +1,1 @@
+streamlit run C:\Users\Michael.Kohlegger\OneDrive\Teaching\ma_rechner.py
