@@ -12,7 +12,7 @@ def safe_results():
 
 st.set_page_config(
     page_title="MA Prüfungsprotokoll",
-    page_icon="🧑‍🏫",
+    page_icon="🏛️",
     layout="wide",
     initial_sidebar_state="auto"
 )
@@ -63,22 +63,22 @@ with tab1:
     pt = st.slider('Präsentationstechnik', 0, 5, 5, 1)
     iv = st.slider('Inhaltsvermerk', 0, 5, 5, 1)
 
-    frag1_ba = st.text_area(f"Fragen zur Masterarbeit P1: {frag1_pruef}")
-    frag2_ba = st.text_area(f"Fragen zur Masterarbeit P2: {frag2_pruef}")
-    frag3_ba = st.text_area(f"Fragen zur Masterarbeit P3: {frag3_pruef}")
+    frag1_ma = st.text_area(f"Fragen zur Masterarbeit P1: {frag1_pruef}")
+    frag2_ma = st.text_area(f"Fragen zur Masterarbeit P2: {frag2_pruef}")
+    frag3_ma = st.text_area(f"Fragen zur Masterarbeit P3: {frag3_pruef}")
 
     df = st.slider('Defensio', 0, 10, 10, 1)
 
     st.subheader(f"Dokumentation der allgemeinen Fragen")
 
-    frag1_memo = st.text_area(f"Allgemeiner Fragenteil P1: {frag1_pruef}")
-    frag1 = st.slider(f'Bewertung 1 ({frag1_pruef})', 0, 100, 50, 5) / 100
+    frag1_allg = st.text_area(f"Allgemeiner Fragenteil P1: {frag1_pruef}")
+    frag1 = st.slider(f'Bewertung P1 ({frag1_pruef})', 0, 100, 50, 5) / 100
 
-    frag2_memo = st.text_area(f"Allgemeiner Fragenteil P2: {frag2_pruef}")
-    frag2 = st.slider(f'Bewertung 2 ({frag2_pruef})', 0, 100, 50, 5) / 100
+    frag2_allg = st.text_area(f"Allgemeiner Fragenteil P2: {frag2_pruef}")
+    frag2 = st.slider(f'Bewertung P2 ({frag2_pruef})', 0, 100, 50, 5) / 100
 
-    frag3_memo = st.text_area(f"Allgemeiner Fragenteil P3: {frag3_pruef}")
-    frag3 = st.slider(f'Bewertung 3 ({frag3_pruef})', 0, 100, 50, 5) / 100
+    frag3_allg = st.text_area(f"Allgemeiner Fragenteil P3: {frag3_pruef}")
+    frag3 = st.slider(f'Bewertung P3 ({frag3_pruef})', 0, 100, 50, 5) / 100
 
 with tab2:
 
@@ -86,8 +86,8 @@ with tab2:
 
     ma_anteil = ma * 0.4
     fragen_punkte = frag1*40/3+frag2*40/3+frag3*40/3
-    memo_a = f"{frag1_pruef}: {frag1_ba}\n\n{frag2_pruef}: {frag2_ba}\n\n{frag3_pruef}: {frag3_ba}"
-    memo_b = f"{frag1_pruef} ({frag1*100}%): {frag1_memo}\n\n{frag2_pruef} ({frag2*100}%): {frag2_memo}\n\n{frag3_pruef} ({frag3*100}%): {frag3_memo}"
+    memo_a = f"{frag1_pruef}: {frag1_ma}\n\n{frag2_pruef}: {frag2_ma}\n\n{frag3_pruef}: {frag3_ma}"
+    memo_b = f"{frag1_pruef} ({frag1*100}%): {frag1_allg}\n\n{frag2_pruef} ({frag2*100}%): {frag2_allg}\n\n{frag3_pruef} ({frag3*100}%): {frag3_allg}"
     gesamt_punkte = ma_anteil + pt + iv + df + fragen_punkte
 
     st.text_input(
