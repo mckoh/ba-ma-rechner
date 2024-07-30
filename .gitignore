@@ -1,3 +1,6 @@
+# Exclude Backup files as created by the App
+*.backup
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
