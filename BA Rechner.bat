@@ -1,1 +1,0 @@
-streamlit run .\ba_rechner.py
