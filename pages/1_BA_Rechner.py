@@ -6,7 +6,7 @@ from datetime import datetime as dt
 time_now = dt.strftime(dt.now(), "%Y-%m-%d_%H-%M")
 
 def safe_results():
-    with open(f"{time_now}___BA-Prüfungsprotokoll__{lname}_{fname}.txt", "w", encoding="utf-8") as f:
+    with open(f"{time_now}___BA-Prüfungsprotokoll__{lname}_{fname}.backup", "w", encoding="utf-8") as f:
         f.write("Punkte Verteidigung: "+str(ba_punkte)+"\n\n\n"+memo_a+"\n\n\n"+"Punkte Querverbindungen: "+str(fragen_punkte)+"\n\n\n"+memo_b+"\n\n\n"+str(gesamt_punkte))
 
 st.set_page_config(
@@ -36,7 +36,6 @@ with st.sidebar:
 
     fname = st.text_input("Vorname")
     lname = st.text_input("Nachname")
-    ma = st.number_input("Punkte Masterarbeit",  step=1, max_value=100, min_value=60)
 
     st.subheader("Kommission")
 

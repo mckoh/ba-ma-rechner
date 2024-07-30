@@ -6,7 +6,7 @@ from datetime import datetime as dt
 time_now = dt.strftime(dt.now(), "%Y-%m-%d")
 
 def safe_results():
-    with open(f"{time_now}___MA-Prüfungsprotokoll__{lname}_{fname}.txt", "w", encoding="utf-8") as f:
+    with open(f"{time_now}___MA-Prüfungsprotokoll__{lname}_{fname}.backup", "w", encoding="utf-8") as f:
         f.write("Punkte Verteidigung: "+str(df)+"\n\n\n"+memo_a+"\n\n\n"+"Punkte Präsentation+Inhalt: "+str(iv+pt)+"\n\n\n"+memo_b+"\n\n\n"+str(gesamt_punkte))
 
 
