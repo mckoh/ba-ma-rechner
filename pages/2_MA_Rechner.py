@@ -56,28 +56,26 @@ tab1, tab2 = st.tabs(["Dokumentation", "Ergebnisse"])
 
 with tab1:
 
-    st.header(f"Dokumentation der Fragen")
-
-    st.subheader("Präsentation der Masterarbeit")
+    st.header("Präsentation der Masterarbeit")
 
     pt = st.slider('Präsentationstechnik', 0, 5, 5, 1)
     iv = st.slider('Inhaltsvermerk', 0, 5, 5, 1)
 
-    frag1_ma = st.text_area(f"Fragen zur Masterarbeit P1: {frag1_pruef}")
-    frag2_ma = st.text_area(f"Fragen zur Masterarbeit P2: {frag2_pruef}")
-    frag3_ma = st.text_area(f"Fragen zur Masterarbeit P3: {frag3_pruef}")
+    frag1_ma = st.text_area(f"Prüfer(in) DEF-1: {frag1_pruef}")
+    frag2_ma = st.text_area(f"Prüfer(in) DEF-2: {frag2_pruef}")
+    frag3_ma = st.text_area(f"Prüfer(in) DEF-3: {frag3_pruef}")
 
     df = st.slider('Defensio', 0, 10, 10, 1)
 
-    st.subheader(f"Dokumentation der allgemeinen Fragen")
+    st.header(f"Allgemeinen Fragenteil")
 
-    frag1_allg = st.text_area(f"Allgemeiner Fragenteil P1: {frag1_pruef}")
+    frag1_allg = st.text_area(f"Prüfer(in) ALLG-1: {frag1_pruef}")
     frag1 = st.slider(f'Bewertung P1 ({frag1_pruef})', 0, 100, 50, 5) / 100
 
-    frag2_allg = st.text_area(f"Allgemeiner Fragenteil P2: {frag2_pruef}")
+    frag2_allg = st.text_area(f"Prüfer(in) ALLG-2: {frag2_pruef}")
     frag2 = st.slider(f'Bewertung P2 ({frag2_pruef})', 0, 100, 50, 5) / 100
 
-    frag3_allg = st.text_area(f"Allgemeiner Fragenteil P3: {frag3_pruef}")
+    frag3_allg = st.text_area(f"Prüfer(in) ALLG-3: {frag3_pruef}")
     frag3 = st.slider(f'Bewertung P3 ({frag3_pruef})', 0, 100, 50, 5) / 100
 
 with tab2:

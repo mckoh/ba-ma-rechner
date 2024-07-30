@@ -51,25 +51,23 @@ tab1, tab2 = st.tabs(["Dokumentation", "Ergebnisse"])
 
 with tab1:
 
-    st.header(f"Dokumentation der Fragen")
+    st.header("Vorstellung der Bachelorarbeit")
 
-    st.subheader("Vorstellung der Bachelorarbeit")
-
-    frag1_ba = st.text_area(f"Fragen zur Masterarbeit P1: {frag1_pruef}")
-    frag2_ba = st.text_area(f"Fragen zur Masterarbeit P2: {frag2_pruef}")
-    frag3_ba = st.text_area(f"Fragen zur Masterarbeit P3: {frag3_pruef}")
+    frag1_ba = st.text_area(f"Prüfer(in) DEF-1: {frag1_pruef}")
+    frag2_ba = st.text_area(f"Prüfer(in) DEF-2: {frag2_pruef}")
+    frag3_ba = st.text_area(f"Prüfer(in) DEF-3: {frag3_pruef}")
 
     ba_punkte = st.slider('Vorstellung + Verteidigung BA', 0, 30, 20, 1)
 
-    st.subheader(f"Dokumentation der Fragen im Querverbindungsteil")
+    st.header(f"Dokumentation der Fragen im Querverbindungsteil")
 
-    frag1_quer = st.text_area(f"Fragen zu Querverbindungsthemen P1: {frag1_pruef}")
+    frag1_quer = st.text_area(f"Prüfer(in) QUER-1: {frag1_pruef}")
     frag1 = st.slider(f'Bewertung 1 ({frag1_pruef})', 0, 100, 50, 5) / 100
 
-    frag2_quer = st.text_area(f"Fragen zu Querverbindungsthemen P2: {frag2_pruef}")
+    frag2_quer = st.text_area(f"Prüfer(in) QUER-2: {frag2_pruef}")
     frag2 = st.slider(f'Bewertung 2 ({frag2_pruef})', 0, 100, 50, 5) / 100
 
-    frag3_quer = st.text_area(f"Fragen zu Querverbindungsthemen P3: {frag3_pruef}")
+    frag3_quer = st.text_area(f"Prüfer(in) QUER-3: {frag3_pruef}")
     frag3 = st.slider(f'Bewertung 3 ({frag3_pruef})', 0, 100, 50, 5) / 100
 
 with tab2:
