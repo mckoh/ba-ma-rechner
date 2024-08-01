@@ -29,7 +29,8 @@ pruefer = [
     "Julian BIALAS",
     "Dietmar MILLINGER",
     "Johannes LARCHER",
-    "Johannes SPIESS"
+    "Johannes SPIESS",
+    "Thomas STRÖHLE"
 ]
 
 with st.sidebar:
